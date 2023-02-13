@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTests.Client", "B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTests.Shared", "BlazorWASMTests\Shared\BlazorWASMTests.Shared.csproj", "{B62F0DBF-0ED7-4ABD-991E-5507333EF62D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWASMTests.Toastr", "BlazorWASMTests\BlazorWASMTests.Toastr\BlazorWASMTests.Toastr.csproj", "{685B4CE4-D697-4E44-B982-D90EC9887917}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toastr", "BlazorWASMTests\Toastr\Toastr.csproj", "{685B4CE4-D697-4E44-B982-D90EC9887917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
