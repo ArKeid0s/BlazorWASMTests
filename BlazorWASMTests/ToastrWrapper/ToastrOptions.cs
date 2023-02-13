@@ -1,8 +1,8 @@
 ﻿using System.Text.Json.Serialization;
-using BlazorWASMTests.Toastr.CustomConverters;
-using BlazorWASMTests.Toastr.Enumerations;
+using BlazorWASMTests.ToastrWrapper.CustomConverters;
+using BlazorWASMTests.ToastrWrapper.Enumerations;
 
-namespace BlazorWASMTests.Toastr;
+namespace BlazorWASMTests.ToastrWrapper;
 
 public class ToastrOptions
 {
@@ -17,6 +17,12 @@ public class ToastrOptions
 	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrShowOptions>))]
 	[JsonPropertyName("showMethod")]
 	public ToastrShowOptions ShowMethod { get; set; }
+
+	[JsonPropertyName("preventDuplicates")]
+	public bool PreventDuplicates { get; set; }
+	
+	[JsonPropertyName("progressBar")]
+	public bool ProgressBar { get; set; }
 
 	[JsonPropertyName("closeButton")]
 	public bool CloseButton { get; set; }

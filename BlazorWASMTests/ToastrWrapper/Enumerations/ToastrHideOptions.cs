@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace BlazorWASMTests.Toastr.Enumerations;
+namespace BlazorWASMTests.ToastrWrapper.Enumerations;
 
 public enum ToastrHideOptions
 {

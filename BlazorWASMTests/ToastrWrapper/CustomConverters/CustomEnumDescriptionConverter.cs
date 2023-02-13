@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
-namespace BlazorWASMTests.Toastr.CustomConverters;
+namespace BlazorWASMTests.ToastrWrapper.CustomConverters;
 
 public class CustomEnumDescriptionConverter<T> : JsonConverter<T> where T : Enum
 {

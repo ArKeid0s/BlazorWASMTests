@@ -1,0 +1,57 @@
+﻿@page "/ToastrWrapper"
+@using BlazorWASMTests.ToastrWrapper
+@using BlazorWASMTests.ToastrWrapper.Enumerations
+@using BlazorWASMTests.ToastrWrapper.Services
+@inject ToastrService ToastrService
+
+<h3>ToastrWrapper</h3>
+
+<div class="row">
+    <div class="col-md-4">
+        <h4>
+            Calling Toastr function
+        </h4>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-info" @onclick="ShowToastrInfo">Show Toastr Info</button>
+    </div>
+    <div class="col-md-3">
+        <button type="button" class="btn btn-info" @onclick="ShowToastrSuccess">Show Toastr Success</button>
+    </div>
+</div>
+
+@code {
+    private async Task ShowToastrInfo()
+    {
+        ToastrOptions options = new()
+        { 
+            CloseButton = false, 
+            HideDuration = 300,
+            HideMethod = ToastrHideOptions.SlideUp,
+            ShowMethod = ToastrShowOptions.SlideDown,
+            Position = ToastrPositionOptions.BottomRight,
+            PreventDuplicates = true,
+            ProgressBar = true
+        };
+        string title = String.Empty;
+        string message = "Hello World from Blazor Toastr Wrapper";
+        await ToastrService.ShowInfoMessageAsync(title, message, options);
+    }
+    
+    private async Task ShowToastrSuccess()
+    {
+        ToastrOptions options = new()
+        { 
+            CloseButton = true, 
+            HideDuration = 300,
+            HideMethod = ToastrHideOptions.SlideUp,
+            ShowMethod = ToastrShowOptions.SlideDown,
+            Position = ToastrPositionOptions.BottomRight,
+            PreventDuplicates = false,
+            ProgressBar = false
+        };
+        string title = "Success";
+        string message = "Hello World from Blazor Toastr Wrapper";
+        await ToastrService.ShowSuccessMessageAsync(title, message, options);
+    }
+}

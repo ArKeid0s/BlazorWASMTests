@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Shared\BlazorWASMTests.Shared.csproj" />
+    <ProjectReference Include="..\ToastrWrapper\ToastrWrapper.csproj" />
   </ItemGroup>
 
 </Project>

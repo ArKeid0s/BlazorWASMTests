@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace BlazorWASMTests.Toastr.Services;
+namespace BlazorWASMTests.ToastrWrapper.Services;
 
 public static class ServiceCollectionExtension
 {
