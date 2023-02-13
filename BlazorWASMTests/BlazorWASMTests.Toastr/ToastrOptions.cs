@@ -1,20 +1,22 @@
 ﻿using System.Text.Json.Serialization;
+using BlazorWASMTests.Toastr.CustomConverters;
+using BlazorWASMTests.Toastr.Enumerations;
 
 namespace BlazorWASMTests.Toastr;
 
 public class ToastrOptions
 {
-	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrPosition>))]
+	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrPositionOptions>))]
 	[JsonPropertyName("positionClass")]
-	public ToastrPosition Position { get; set; }
+	public ToastrPositionOptions Position { get; set; }
 
-	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrHideMethod>))]
+	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrHideOptions>))]
 	[JsonPropertyName("hideMethod")]
-	public ToastrHideMethod HideMethod { get; set; }
+	public ToastrHideOptions HideMethod { get; set; }
 
-	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrShowMethod>))]
+	[JsonConverter(typeof(CustomEnumDescriptionConverter<ToastrShowOptions>))]
 	[JsonPropertyName("showMethod")]
-	public ToastrShowMethod ShowMethod { get; set; }
+	public ToastrShowOptions ShowMethod { get; set; }
 
 	[JsonPropertyName("closeButton")]
 	public bool CloseButton { get; set; }

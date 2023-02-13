@@ -2,7 +2,7 @@
 
 namespace BlazorWASMTests.Toastr.Enumerations;
 
-public enum ToastrPostionOptions
+public enum ToastrPositionOptions
 {
 	[Description("toast-top-right")] TopRight,
 	[Description("toast-bottom-right")] BottomRight,
